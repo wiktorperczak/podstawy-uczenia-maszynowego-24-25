@@ -5,35 +5,40 @@ description = ""
 authors = [{name = "Jakub Adamczyk (j-adamczyk)", email = "jadamczy@agh.edu.pl"}]
 readme = "README.md"
 
-requires-python = ">=3.11,<3.12"
-dynamic = ["dependencies"]
+requires-python = "==3.11.*"
 
-[tool.poetry]
-package-mode = false
+dependencies = [
+    "feature_engine",
+    "jupyter",
+    "matplotlib",
+    "pandas==2.*",
+    "pillow",
+    "pyarrow",
+    "pynndescent",
+    "scikit-fingerprints",
+    "scikit-learn",
+    "seaborn",
+    "sentence_transformers",
+    "torch",
+    "tqdm"
+]
 
-[tool.poetry.dependencies]
-feature-engine = "*"
-jupyter = "*"
-matplotlib = "*"
-pandas = "2.*"
-pyarrow = "*"
-scikit-learn = "*"
-seaborn = "*"
+[dependency-groups]
+dev = [
+    "pre-commit",
+    "ruff"
+]
 
-[tool.poetry.group.dev.dependencies]
-pre-commit = "*"
-ruff = "*"
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu" }]
 
-[[tool.poetry.source]]
-name = "pytorch"
+[[tool.uv.index]]
+name = "pytorch-cpu"
 url = "https://download.pytorch.org/whl/cpu"
-priority = "explicit"
+explicit = true
 
 [tool.ruff.lint]
 ignore = [
     "E731",  # lambda expressions
 ]
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+exclude = ["**notebook.ipynb"]

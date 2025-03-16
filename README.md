@@ -3,20 +3,20 @@
 ## Spis treści
 
 * [Modele liniowe (linear models)](lab1)
-
+* [Modele oparte o sąsiedztwo (nearest neighbors)](lab2)
 
 ## Setup
 
-Zależności potrzebne do wykonania notebooków są zawarte w `pyproject.toml` oraz `poetry.lock`,
-zarządzanych przez [Poetry](https://python-poetry.org/docs/). Najpierw trzeba utworzyć
-środowisko  wirtualne i projekt Poetry, do czego polecam użyć PyCharma. Później w terminalu
-trzeba upewnić się, że środowisko jest aktywowane (w PyCharmie jest to automatyczne).
-Zależności najłatwiej zainstalować przez `poetry sync`. Plik `pyproject.toml` będzie
-systematycznie aktualizowany na potrzeby kolejnych laboratoriów.
+Zależności potrzebne do wykonania notebooków są zawarte w `pyproject.toml` oraz `uv.lock`,
+zarządzanych przez [uv](https://docs.astral.sh/uv/). Jeżeli korzystasz z PyCharma, stwórz
+nowy projekt z dependency managerem uv (File -> Settings -> Project -> Python interpreter
+-> Add interpreter -> uv). Uruchomienie w terminalu `uv sync` zainstaluje odpowiednią wersję
+Pythona oraz wszystkie zależności. Pliki będą systematycznie aktualizowane na potrzeby
+kolejnych laboratoriów.
 
-Aktualizacja zależności wymaga wywołania ponownie `poetry sync`. W razie potrzeby przebudowania
-zależności w Poetry trzeba dodać ją do `pyproject.toml`, rozwiązać zależności wywołując
-`poetry lock`, oraz instalując z `poetry sync`.
+Aktualizacja zależności wymaga wywołania ponownie `uv sync`. W razie potrzeby przebudowania
+zależności w uv trzeba dodać ją do `pyproject.toml` oraz rozwiązać i zainstalować zależności
+przez `uv sync`.
 
 Repozytorium zawiera też bibliotekę [ruff](https://docs.astral.sh/ruff/) do formatowania
 kodu. Sugerowane jest użycie [pre-commit hooka](https://docs.astral.sh/ruff/integrations/#pre-commit),
