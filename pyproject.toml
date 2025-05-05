@@ -11,6 +11,7 @@ dependencies = [
     "feature_engine",
     "jupyter",
     "matplotlib",
+    "notebook>=7.3.3",
     "pandas==2.*",
     "pillow",
     "pyarrow",
@@ -20,7 +21,7 @@ dependencies = [
     "seaborn",
     "sentence_transformers",
     "torch",
-    "tqdm"
+    "tqdm",
 ]
 
 [dependency-groups]
