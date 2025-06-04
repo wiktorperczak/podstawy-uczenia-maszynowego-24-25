@@ -9,6 +9,7 @@ requires-python = "==3.11.*"
 
 dependencies = [
     "feature_engine",
+    "imblearn",
     "jupyter",
     "matplotlib",
     "notebook>=7.3.3",
@@ -16,12 +17,14 @@ dependencies = [
     "pillow",
     "pyarrow",
     "pynndescent",
+    "pyod",
     "scikit-fingerprints",
     "scikit-learn",
     "seaborn",
     "sentence_transformers",
     "torch",
     "tqdm",
+    "xgboost"
 ]
 
 [dependency-groups]
