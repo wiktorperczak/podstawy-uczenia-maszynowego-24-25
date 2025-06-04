@@ -8,8 +8,8 @@ readme = "README.md"
 requires-python = "==3.11.*"
 
 dependencies = [
-    "feature_engine",
-    "imblearn",
+    "feature-engine",
+    "imbalanced-learn",
     "jupyter",
     "matplotlib",
     "notebook>=7.3.3",
@@ -24,7 +24,7 @@ dependencies = [
     "sentence_transformers",
     "torch",
     "tqdm",
-    "xgboost"
+    "xgboost",
 ]
 
 [dependency-groups]
